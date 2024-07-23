@@ -1,4 +1,8 @@
 spring:
+  security:
+    user.name: daniel
+    user.password: 1234
+
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: username
