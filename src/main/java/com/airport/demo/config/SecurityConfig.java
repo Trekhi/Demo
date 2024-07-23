@@ -49,9 +49,10 @@ public class SecurityConfig {
     /**
      * Este metodo realiza un rastreo de datos del usuario, para almacenar la información
      */
-    @Bean
+    @Bean //Esta maldita notación ayuda a instaciar un metodo, para las demas clases del programa.
     public SessionRegistry sessionRegistry() {
         return new SessionRegistryImpl();
+
     }
 
     /**
@@ -59,7 +60,7 @@ public class SecurityConfig {
      */
     public AuthenticationSuccessHandler successHandler() {
         return (((request, response, authentication) -> {
-            response.sendRedirect("/prueba");
+            response.sendRedirect("/plane/session");
         }));
     }
 }
